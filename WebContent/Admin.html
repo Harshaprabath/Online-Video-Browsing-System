@@ -207,6 +207,7 @@
 	                                                <!-- Edit profile tab -->
 	                                                <div role="tabpanel" class="tab-pane fade" id="buzz">
 	                                                <br>
+	                                                	<form  id="login-form" action="" class="needs-validation" method="post" novalidate>
 	                                                        <div class="row">
                                                                 <div class="col-md-3">
                                                                     <label>Full name</label>
@@ -245,10 +246,11 @@
                                                             </div>
                                                             <br>
                                                             <button type="submit" class="btn btn-primary" (click)="openModal()">Save changes</button>
+                                                            
                                                             <br>
                                                             <label><i>To change administrator's password click button-></i></label>
                                                             <button type="button" class="btn btn-light" (click)="openModal()" data-toggle="modal" data-target="#resetpassword">Reset password</button>
-                                                             
+                                                         </form>    
 	                                              </div>
 	                          
 	                                </div>
@@ -282,6 +284,7 @@
 	    <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	        <div class="modal-dialog" role="document">
 	            <div class="modal-content">
+	            <form  id="login-form" action="" class="needs-validation" method="post" novalidate>
 	                <div class="modal-header">
 	                    <h5 class="modal-title" id="contact">Upload video</h5>
 	                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -299,11 +302,13 @@
 	                    <div class="form-group">
 	                        <label for="txtFullname">Please select video</label>
 	                        <button class="btn btn-success btn-block follow" onclick="document.location='index.html'">Browse video</button>
+	                        
 	                    </div>
 	                </div>
 	                <div class="modal-footer">
 	                    <button type="submit" class="btn btn-primary" (click)="openModal()" data-dismiss="modal">Upload</button>
 	                </div>
+	               </form>
 	            </div>
 	        </div>
 	    </div>
@@ -312,6 +317,7 @@
 	    <div class="modal fade" id="deletev" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	        <div class="modal-dialog" role="document">
 	            <div class="modal-content">
+	            	<form  id="login-form" action="" class="needs-validation" method="post" novalidate>
 	                <div class="modal-header">
 	                    <h5 class="modal-title" id="contact">Delete video</h5>
 	                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -330,6 +336,7 @@
 	                <div class="modal-footer">
 	                    <button type="submit" class="btn btn-primary" (click)="openModal()" data-dismiss="modal">Delete</button>
 	                </div>
+	                </form>
 	            </div>
 	        </div>
 	    </div>
@@ -337,6 +344,7 @@
 	    <div class="modal fade" id="messages" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	        <div class="modal-dialog" role="document">
 	            <div class="modal-content">
+	            	
 	                <div class="modal-header">
 	                    <h5 class="modal-title" id="contact">Messages</h5>
 	                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -351,6 +359,7 @@
 	                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
 	                </div>
 	            </div>
+	            
 	        </div>
 	    </div>
 	    </div>
