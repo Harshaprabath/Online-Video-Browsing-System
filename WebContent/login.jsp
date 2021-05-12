@@ -1,19 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
+    <title>Login</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <link rel="stylesheet" href="css/templatemo-style.css">
+    <style>
+    
+    .hov:hover {
+     color: SeaGreen;
+     background-color: transparent;
+     text-decoration: underline;
+     }
+     
+     .hov{color:DodgerBlue; text-decoration: none;}
+     
+     
+    </style>
     
    <!--   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> --> 
    <!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="js/checkReantedPassword.js"> </script>
 
      <script>
 	  // Self-executing function
@@ -57,7 +70,7 @@ https://templatemo.com/tm-556-catalog-z
     </div>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.jsp">
                 <h2>  <i class="fas fa-film mr-2"></i>
                 SingMe</h2>
             </a>
@@ -67,16 +80,16 @@ https://templatemo.com/tm-556-catalog-z
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link nav-link-1" href="index.html">Home</a>
+                    <a class="nav-link nav-link-1" href="index.jsp">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-2" href="videos.html">Videos</a>
+                    <a class="nav-link nav-link-2" href="videos.jsp">Videos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-3" href="about.html">About</a>
+                    <a class="nav-link nav-link-3" href="about.jsp">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-4 " aria-current="page" href="contact.html">Contact</a>
+                    <a class="nav-link nav-link-4 "  href="contact.jsp">Contact</a>
                 </li>
             </ul>
             </div>
@@ -94,67 +107,27 @@ https://templatemo.com/tm-556-catalog-z
             <!-- login form start -->
             
                 <div class="col-lg-4 col-12 mb-5">
-                <h2 class="tm-text-primary mb-5">Register</h2>
+                <h2 class="tm-text-primary mb-5">Log in</h2>
           
-          
-          
-    
-          
-                       <form  id="login-form" action="" class="needs-validation" method="post" onsubmit="return checkpassword()" novalidate>
-                                  
-				              <div class="row">
-								  <div class="col">
-								    <label for="inputFirstname" >First name</label>
-								     	 <input type="text" class="form-control" placeholder="First name" required>
-								    </div>
-								    <div class="col">
-									     <label for="inputLastname">Last name</label>
-									      <input type="text" class="form-control" placeholder="Last name" required>
-								    </div>
-								    </div>
-								    <br>
-																    
-				                   <div class="form-group">
-									    <label for="inputAddress">Address</label>
-									    <input type="text" class="form-control" id="inputAddress" placeholder="Address" required>
-								  </div>
-								  <div class="row">
-								    <div class="col">
-									      <label for="inputCity">City</label>
-									      <input type="text" class="form-control" id="inputCity" required>
-								    </div>
-								    <div class="form-group col-md-4">
-								      <label for="inputState">Country</label>
-								      <select id="inputState" class="form-control">
-								        <option selected>Sri Lanka</option>
-								        <option>india</option>
-								        <option>Bangaladesh</option>
-								        <option>Bangaladesh</option>
-								      </select>
-								    </div>
-							   
-							    </div> 
-								<div class="form-group">
-						            <label for="inputEmail">Email</label>
-						            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
-						            <div class="invalid-feedback">Please enter a valid email address.</div>
-						        </div>
-						        <div class="form-group">
-						            <label for="inputPassword">Password</label>
-						            <input type="password" class="form-control" id="pw" placeholder="Password" required>
-						            <div class="invalid-feedback">Please enter your password to continue.</div>
-						        </div>
-						         <div class="form-group">
-						            <label for="inputRe-enterdPassword">Re-entered Password</label>
-						            <input type="password" class="form-control" id="repw" placeholder="Password" required>
-						            <div class="invalid-feedback">Please re-enter your password to continue.</div>
-						        </div>
+           
+                    <form  id="login-form" action="" class="needs-validation" method="post" novalidate>
+				        <div class="form-group">
+				            <label for="inputEmail">Email</label>
+				            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+				            <div class="invalid-feedback">Please enter a valid email address.</div>
+				        </div>
+				        <div class="form-group">
+				            <label for="inputPassword">Password</label>
+				            <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+				            <div class="invalid-feedback">Please enter your password to continue.</div>
+				        </div>
 				     
-				        <button type="submit" class="btn btn-primary">Register	</button>
-                    </form>
+				        <button type="submit" class="btn btn-primary">Sign in</button>
+                   </form>
+                      <br>
+                    <b>  <a class="hov"  href="Register.jsp">Create an account</a> </b>
     
                      
-          
             </div>
              
              <!-- login form end -->
@@ -180,8 +153,8 @@ https://templatemo.com/tm-556-catalog-z
                     <ul class="tm-footer-links pl-0">
                         <li><a href="https://www.sliit.lk/">Advertise</a></li>
                         <li><a href="https://www.sliit.lk/">Support</a></li>
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="about.jsp">About us</a></li>
+                        <li><a href="contact.jsp">Contact us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">

@@ -1,9 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>User Profile</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <link rel="stylesheet" href="css/templatemo-style.css">
@@ -88,7 +91,7 @@ https://templatemo.com/tm-556-catalog-z
     </div>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.jsp">
                 <h2>  <i class="fas fa-film mr-2"></i>
                 SingMe</h2>
             </a>
@@ -98,16 +101,16 @@ https://templatemo.com/tm-556-catalog-z
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link nav-link-1" href="index.html">Home</a>
+                    <a class="nav-link nav-link-1" href="index.jsp">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-2" href="videos.html">Videos</a>
+                    <a class="nav-link nav-link-2" href="videos.jsp">Videos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-3" href="about.html">About</a>
+                    <a class="nav-link nav-link-3" href="about.jsp">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-4 "  href="contact.html">Contact</a>
+                    <a class="nav-link nav-link-4 "  href="contact.jsp">Contact</a>
                 </li>
             </ul>
             </div>
@@ -155,7 +158,7 @@ https://templatemo.com/tm-556-catalog-z
                                     <h5>Developer</h5>
                                 </div>
                                 <div class="col-md-4 col-sm-6 col-xs-6 profile-header-section1 text-right pull-rigth">
-                                    <a href="index.html" class="btn btn-primary btn-block">Log Out</a>
+                                    <a href="index.jsp" class="btn btn-primary btn-block">Log Out</a>
                                 </div>
                             </div>
                         </div>
@@ -297,7 +300,7 @@ https://templatemo.com/tm-556-catalog-z
                                         </div>
                                         <a href="http://camaradecomerciozn.com/">
                                             <div class="col-md-12 image-right">
-                                               <a class="navbar-brand" href="index.html">
+                                               <a class="navbar-brand" href="index.jsp">
 									                <h2>  <i class="fas fa-film mr-2"></i>
 									                SingMe</h2>
 									            </a>
@@ -413,8 +416,8 @@ https://templatemo.com/tm-556-catalog-z
                     <ul class="tm-footer-links pl-0">
                         <li><a href="https://www.sliit.lk/">Advertise</a></li>
                         <li><a href="https://www.sliit.lk/">Support</a></li>
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="about.jsp">About us</a></li>
+                        <li><a href="contact.jsp">Contact us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">

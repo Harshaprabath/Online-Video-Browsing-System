@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,28 +41,28 @@ https://templatemo.com/tm-556-catalog-z
     </div>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.jsp">
                 <h2>  <i class="fas fa-film mr-2"></i>
                 SingMe</h2>
             </a>
-              <b> <a class="hov1" href="Register.html">Register</a> </b> | 
-            <b> <a class="hov1" href="login.html">Login</a> </b>
+              <b> <a class="hov1" href="Register.jsp">Register</a> </b> | 
+            <b> <a class="hov1" href="login.jsp">Login</a> </b>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link nav-link-1" href="index.html">Home</a>
+                    <a class="nav-link nav-link-1" href="index.jsp">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-2" href="videos.html">Videos</a>
+                    <a class="nav-link nav-link-2" href="videos.jsp">Videos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-3" href="about.html">About</a>
+                    <a class="nav-link nav-link-3" href="about.jsp">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-4 active" aria-current="page" href="contact.html">Contact</a>
+                    <a class="nav-link nav-link-4 active" aria-current="page" href="contact.jsp">Contact</a>
                 </li>
             </ul>
             </div>
@@ -76,7 +78,7 @@ https://templatemo.com/tm-556-catalog-z
                 <form id="contact-form" action="" method="POST" class="tm-contact-form mx-auto">
                 	<i><label for="songName">Please use below link to request new songs.</label></i>
                 	<div class="form-group tm-text-right">
-                        <a href="Request songs.html" class="btn btn-primary">Request books</a>
+                        <a href="Request songs.jsp" class="btn btn-primary">Request books</a>
                     </div>
                     <div class="form-group">
                         <input type="text" name="name" class="form-control rounded-0" placeholder="Name" required />
@@ -158,8 +160,8 @@ https://templatemo.com/tm-556-catalog-z
                     <ul class="tm-footer-links pl-0">
                         <li><a href="https://www.sliit.lk/">Advertise</a></li>
                         <li><a href="https://www.sliit.lk/">Support</a></li>
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="about.jsp">About us</a></li>
+                        <li><a href="contact.jsp">Contact us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">

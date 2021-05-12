@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,12 +42,12 @@ https://templatemo.com/tm-556-catalog-z
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
            
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="index.jsp">
               <h2>  <i class="fas fa-film mr-2"></i>
                 SingMe</h2>
             </a>
-              <b> <a class="hov1" href="Register.html">Register</a> </b> | 
-            <b> <a class="hov1" href="login.html">Login</a> </b>
+              <b> <a class="hov1" href="Register.jsp">Register</a> </b> | 
+            <b> <a class="hov1" href="login.jsp">Login</a> </b>
            
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
@@ -53,16 +55,16 @@ https://templatemo.com/tm-556-catalog-z
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link nav-link-1" href="index.html">Home</a>
+                    <a class="nav-link nav-link-1" href="index.jsp">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-2 active" aria-current="page" href="videos.html">Videos</a>
+                    <a class="nav-link nav-link-2 active" aria-current="page" href="videos.jsp">Videos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-3" href="about.html">About</a>
+                    <a class="nav-link nav-link-3" href="about.jsp">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-4" href="contact.html">Contact</a>
+                    <a class="nav-link nav-link-4" href="contact.jsp">Contact</a>
                 </li>
             </ul>
             </div>
@@ -95,7 +97,7 @@ https://templatemo.com/tm-556-catalog-z
                     <img src="img/img-01.jpg" alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Play</h2>
-                        <a href="video-detail.html">View more</a>
+                        <a href="video-detail.jsp">View more</a>
                     </figcaption>                    
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
@@ -108,7 +110,7 @@ https://templatemo.com/tm-556-catalog-z
                     <img src="img/img-02.jpg" alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Play</h2>
-                        <a href="video-detail.html">View more</a>
+                        <a href="video-detail.jsp">View more</a>
                     </figcaption>                    
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
@@ -121,7 +123,7 @@ https://templatemo.com/tm-556-catalog-z
                     <img src="img/img-03.jpg" alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Play</h2>
-                        <a href="video-detail.html">View more</a>
+                        <a href="video-detail.jsp">View more</a>
                     </figcaption>                    
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
@@ -134,7 +136,7 @@ https://templatemo.com/tm-556-catalog-z
                     <img src="img/img-04.jpg" alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Play</h2>
-                        <a href="video-detail.html">View more</a>
+                        <a href="video-detail.jsp">View more</a>
                     </figcaption>                    
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
@@ -147,7 +149,7 @@ https://templatemo.com/tm-556-catalog-z
                     <img src="img/img-05.jpg" alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Play</h2>
-                        <a href="video-detail.html">View more</a>
+                        <a href="video-detail.jsp">View more</a>
                     </figcaption>                    
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
@@ -160,7 +162,7 @@ https://templatemo.com/tm-556-catalog-z
                     <img src="img/img-06.jpg" alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Play</h2>
-                        <a href="video-detail.html">View more</a>
+                        <a href="video-detail.jsp">View more</a>
                     </figcaption>                    
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
@@ -173,7 +175,7 @@ https://templatemo.com/tm-556-catalog-z
                     <img src="img/img-07.jpg" alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Play</h2>
-                        <a href="video-detail.html">View more</a>
+                        <a href="video-detail.jsp">View more</a>
                     </figcaption>                    
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
@@ -186,7 +188,7 @@ https://templatemo.com/tm-556-catalog-z
                     <img src="img/img-08.jpg" alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Play</h2>
-                        <a href="video-detail.html">View more</a>
+                        <a href="video-detail.jsp">View more</a>
                     </figcaption>                    
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
@@ -199,7 +201,7 @@ https://templatemo.com/tm-556-catalog-z
                     <img src="img/img-09.jpg" alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Play</h2>
-                        <a href="video-detail.html">View more</a>
+                        <a href="video-detail.jsp">View more</a>
                     </figcaption>                    
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
@@ -212,7 +214,7 @@ https://templatemo.com/tm-556-catalog-z
                     <img src="img/img-10.jpg" alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Play</h2>
-                        <a href="video-detail.html">View more</a>
+                        <a href="video-detail.jsp">View more</a>
                     </figcaption>                    
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
@@ -225,7 +227,7 @@ https://templatemo.com/tm-556-catalog-z
                     <img src="img/img-11.jpg" alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Play</h2>
-                        <a href="video-detail.html">View more</a>
+                        <a href="video-detail.jsp">View more</a>
                     </figcaption>                    
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
@@ -238,7 +240,7 @@ https://templatemo.com/tm-556-catalog-z
                     <img src="img/img-12.jpg" alt="Image" class="img-fluid">
                     <figcaption class="d-flex align-items-center justify-content-center">
                         <h2>Play</h2>
-                        <a href="video-detail.html">View more</a>
+                        <a href="video-detail.jsp">View more</a>
                     </figcaption>                    
                 </figure>
                 <div class="d-flex justify-content-between tm-text-gray">
@@ -275,8 +277,8 @@ https://templatemo.com/tm-556-catalog-z
                     <ul class="tm-footer-links pl-0">
                         <li><a href="https://www.sliit.lk/">Advertise</a></li>
                         <li><a href="https://www.sliit.lk/">Support</a></li>
-                        <li><a href="about.html">About us</a></li>
-                        <li><a href="contact.html">Contact us</a></li>
+                        <li><a href="about.jsp">About us</a></li>
+                        <li><a href="contact.jsp">Contact us</a></li>
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-6 col-12 px-5 mb-5">
