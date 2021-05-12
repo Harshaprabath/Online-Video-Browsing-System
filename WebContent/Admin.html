@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Administrator</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
     <link rel="stylesheet" href="css/templatemo-style.css">
@@ -12,7 +12,7 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+    <script src="js/checkReantedPassword.js"></script>
     <style>
     
     .hov:hover {
@@ -31,7 +31,27 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+	
+	<script>
+	  // Self-executing function
+			  (function() {
+			         'use strict';
+			         window.addEventListener('load', function() {
+			          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+			            var forms = document.getElementsByClassName('needs-validation');
+			                // Loop over them and prevent submission
+			                var validation = Array.prototype.filter.call(forms, function(form) {
+			                    form.addEventListener('submit', function(event) {
+			                        if (form.checkValidity() === false) {
+			                            event.preventDefault();
+			                            event.stopPropagation();
+			                         }
+			                      form.classList.add('was-validated');
+		                   }, false);
+			               });
+			          }, false);
+			       })();
+	 </script>
   
 </head>
 <body>
@@ -91,16 +111,14 @@
 	                        </div>
 	                        <div class="col-md-12 col-sm-12 col-xs-12 user-detail-section1 text-center">
 	                            <button id="btn-contact" (click)="clearModal()" data-toggle="modal" data-target="#contact" class="btn btn-success btn-block follow">Upload video</button> 
-	                            <button id="btn-contact" (click)="clearModal()" data-toggle="modal" data-target="#test1" class="btn btn-success btn-block follow">Delete video</button> 
-	                            <button class="btn btn-success btn-block follow" onclick="document.location='index.html'">Upload video</button>
-	                            <button class="btn btn-success btn-block follow" onclick="document.location='index.html'">Descargar Curriculum</button>
-	                            <button class="btn btn-success btn-block follow" onclick="document.location='index.html'">Descargar Curriculum</button>                                
+	                            <button id="btn-contact" (click)="clearModal()" data-toggle="modal" data-target="#deletev" class="btn btn-success btn-block follow">Delete video</button> 
+	                            <button id="btn-contact" (click)="clearModal()" data-toggle="modal" data-target="#messages" class="btn btn-success btn-block follow">Messages</button>
+	                            <button id="btn-contact" (click)="clearModal()" data-toggle="modal" data-target="#reqs" class="btn btn-success btn-block follow">Requested songs</button>
+	                                                           
 	                        </div>
 	                        <div class="row user-detail-row">
 	                            <div class="col-md-12 col-sm-12 user-detail-section2 pull-left">
 	                                <div class="border"></div>
-	                                <p>FOLLOWER</p>
-	                                <span>320</span>
 	                            </div>                           
 	                        </div>
 	                       
@@ -112,9 +130,10 @@
 	                            <div class="row">
 	                                <div class="col-md-8 col-sm-6 col-xs-6 profile-header-section1 pull-left">
 	                                    <h1>Anuradha H.L</h1>
+	                                    <h5>Administrator at SingMe</h5>
 	                                </div>
 	                                <div class="col-md-4 col-sm-6 col-xs-6 profile-header-section1 text-right pull-rigth">
-	                                    <a href="/search" class="btn btn-primary btn-block">Log out</a>
+	                                    <a href="index.html" class="btn btn-dark btn-block">Log out</a>
 	                                </div>
 	                            </div>
 	                        </div>
@@ -126,7 +145,7 @@
 	                                                  <a class="nav-link active" href="#profile" role="tab" data-toggle="tab"><i class="fas fa-user-circle"></i> Admin profile</a>
 	                                                </li>
 	                                                <li class="nav-item">
-	                                                  <a class="nav-link" href="#buzz" role="tab" data-toggle="tab"><i class="fas fa-info-circle"></i> Edit profile</a>
+	                                                  <a class="nav-link" href="#buzz" role="tab" data-toggle="tab"><i class="fas fa-edit"></i> Edit profile</a>
 	                                                </li>                                                
 	                                              </ul>
 	                                              
@@ -185,52 +204,51 @@
 	                                                            </div>
 	                                                </div>
 	                                                
-	                                                <!-- Edit tab -->
+	                                                <!-- Edit profile tab -->
 	                                                <div role="tabpanel" class="tab-pane fade" id="buzz">
 	                                                <br>
 	                                                        <div class="row">
-                                                                <div class="col-md-2">
-                                                                    <label>Name</label>
+                                                                <div class="col-md-3">
+                                                                    <label>Full name</label>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                     <input type="email" class="form-control" class="form-control" value="Juan perez" required>
+                                                                     <input type="email" class="form-control" class="form-control" value="Test" required>
                                                                 </div>
                                                             </div>
                                                              <br>
                                                             <div class="row">
-                                                                <div class="col-md-2">
+                                                                <div class="col-md-3">
                                                                     <label>Email</label>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                	<input type="email" class="form-control" id="inputEmail" value="juanp@gmail.com" required>
+                                                                	<input type="email" class="form-control" id="inputEmail" value="test@gmail.com" required>
                                                                     
                                                                 </div>
                                                             </div>
                                                              <br>
                                                             <div class="row">
-                                                                <div class="col-md-2">
-                                                                    <label>Address</label>
+                                                                <div class="col-md-3">
+                                                                    <label>Contact no</label>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <input type="text" class="form-control" id="inputAddress" value="123456789" required>
+                                                                    <input type="text" class="form-control" id="inputAddress" value="033 22 59688" required>
                                                                 </div>
                                                             </div>
                                                             <br>
                                                             <div class="row">
-                                                                <div class="col-md-2">
-                                                                    <label>City</label>
+                                                                <div class="col-md-3">
+                                                                    <label>Address</label>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <input type="text" class="form-control" id="inputCity"   value="Kaduwela" required>
+                                                                    <input type="text" class="form-control" id="inputCity"   value="Gampaha" required>
                                                                 </div>
                                                             </div>
-                                                             <br>
-                                                             <div class="row">
-                                                                <div class="col-md-2">
-                                                                    <label>Country</label>
-                                                                </div>
-	                                                </div>
-	                                                
+                                                            <br>
+                                                            <button type="submit" class="btn btn-primary" (click)="openModal()">Save changes</button>
+                                                            <br>
+                                                            <label><i>To change administrator's password click button-></i></label>
+                                                            <button type="button" class="btn btn-light" (click)="openModal()" data-toggle="modal" data-target="#resetpassword">Reset password</button>
+                                                             
 	                                              </div>
 	                          
 	                                </div>
@@ -244,10 +262,6 @@
 	                                        </div>
 	                                        <a href="http://camaradecomerciozn.com/">
 	                                            <div class="col-md-12 image-right">
-	                                                <a class="navbar-brand" href="index.html">
-                										<h2>  <i class="fas fa-film mr-2"></i>
-                										SingMe</h2>
-            										</a>
 	                                            </div>
 	                                        </a>
 	                                        <div class="col-md-12 image-right-detail-section2">
@@ -288,45 +302,113 @@
 	                    </div>
 	                </div>
 	                <div class="modal-footer">
-	                    <button type="button" class="btn btn-secondary" (click)="openModal()">Upload</button>
+	                    <button type="submit" class="btn btn-primary" (click)="openModal()" data-dismiss="modal">Upload</button>
 	                </div>
 	            </div>
 	        </div>
 	    </div>
 	    
-	    <!-- Pop-up box 2 -->
-	    <div class="modal fade" id="test1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	    <!-- Pop-up box 2 - Delete video -->
+	    <div class="modal fade" id="deletev" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	        <div class="modal-dialog" role="document">
 	            <div class="modal-content">
 	                <div class="modal-header">
-	                    <h5 class="modal-title" id="contact">Contactarme</h5>
+	                    <h5 class="modal-title" id="contact">Delete video</h5>
 	                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
 	                        <span aria-hidden="true">×</span>
 	                    </button>
 	                </div>
 	                <div class="modal-body">
 	                    <div class="form-group">
-	                        <p for="msj">Se enviará este mensaje a la persona que desea contactar, indicando que te quieres comunicar con el. Para esto debes de ingresar tu información personal.</p>
+	                        <p for="msj">To delete a video, enter song name first. Then click delete button to proceed.</p>
 	                    </div>
 	                    <div class="form-group">
-	                        <label for="txtFullname">Test 1 here</label>
+	                        <label for="txtFullname">Song name</label>
 	                        <input type="text" id="txtFullname" class="form-control">
-	                    </div>
-	                    <div class="form-group">
-	                        <label for="txtEmail">Email</label>
-	                        <input type="text" id="txtEmail" class="form-control">
-	                    </div>
-	                    <div class="form-group">
-	                        <label for="txtPhone">Teléfono</label>
-	                        <input type="text" id="txtPhone" class="form-control">
-	                    </div>
+	                    </div>               
 	                </div>
 	                <div class="modal-footer">
-	                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-	                    <button type="button" class="btn btn-primary" (click)="openModal()" data-dismiss="modal">Guardar</button>
+	                    <button type="submit" class="btn btn-primary" (click)="openModal()" data-dismiss="modal">Delete</button>
 	                </div>
 	            </div>
 	        </div>
+	    </div>
+	    <!-- Pop-up box 3 - Messages -->
+	    <div class="modal fade" id="messages" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	        <div class="modal-dialog" role="document">
+	            <div class="modal-content">
+	                <div class="modal-header">
+	                    <h5 class="modal-title" id="contact">Messages</h5>
+	                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                        <span aria-hidden="true">×</span>
+	                    </button>
+	                </div>
+	                <div class="modal-body">
+	                    <div class="form-group">
+	                        <p for="msj">Users messages will shown here.</p>
+	                    </div>
+	                <div class="modal-footer">
+	                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    </div>
+	    <!-- Pop-up box 4 - Song requests -->
+	    <div class="modal fade" id="reqs" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	        <div class="modal-dialog" role="document">
+	            <div class="modal-content">
+	                <div class="modal-header">
+	                    <h5 class="modal-title" id="contact">Song requests</h5>
+	                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                        <span aria-hidden="true">×</span>
+	                    </button>
+	                </div>
+	                <div class="modal-body">
+	                    <div class="form-group">
+	                        <p for="msj">Users song requests will shown here.</p>
+	                    </div>
+	                <div class="modal-footer">
+	                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    </div>
+	    <!-- Pop-up box 5 - Reset password -->
+	    <div class="modal fade" id="resetpassword" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	        <div class="modal-dialog" role="document">
+	            <div class="modal-content">
+	            <form  id="login-form" action="" class="needs-validation" method="post"  onsubmit="return checkpassword()" novalidate> 
+	                <div class="modal-header">
+	                    <h5 class="modal-title" id="contact">Reset password</h5>
+	                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	                        <span aria-hidden="true">×</span>
+	                    </button>
+	                </div>
+	                <div class="modal-body">
+	                    <div class="form-group">
+	                        <p for="msj">Reset administrator's password here.</p>
+	                    </div>
+	                    <div class="form-group">
+	                        <label for="txtFullname">Current password</label>
+	                        <input type="password" id="txtFullname" class="form-control" placeholder="password" required>
+	                    </div>
+	                    <div class="form-group">
+	                        <label for="txtFullname">Enter new password</label>
+	                        <input type="password" id="pw" class="form-control" placeholder="new password" required>
+	                    </div>    
+	                    <div class="form-group">
+	                        <label for="txtFullname">Confirm new password</label>
+	                        <input type="password" id="repw" class="form-control" placeholder="retype new password" required>
+	                    </div>  
+	                <div class="modal-footer">
+	                    <button type="submit" class="btn btn-primary">Change</button>
+	                </div>
+	            </div>
+	            </form>
+	        </div>
+	    </div>
 	    </div>
             <!-- Admin panel end here -->
              
