@@ -15,7 +15,12 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/UsserAcount.css">
     
+  
+    <script src="js/checkReantedPassword.js"> </script>
     
+    
+    
+  
     
     
     
@@ -128,8 +133,9 @@ https://templatemo.com/tm-556-catalog-z
                             <img src="https://www.jamf.com/jamf-nation/img/default-avatars/generic-user-purple.png" class="rounded-circle">
                         </div>
                         <div class="col-md-12 col-sm-12 col-xs-12 user-detail-section1 text-center">
-                            <button id="btn-contact" (click)="clearModal()" data-toggle="modal" data-target="#contact" class="btn btn-success btn-block follow">Contactarme</button> 
-                            <button class="btn btn-warning btn-block">Descargar Curriculum</button>                               
+                            <button id="btn-contact" (click)="clearModal()" data-toggle="modal" data-target="#contact" class="btn btn-success btn-block follow">Change Password</button> 
+                            <button id="btn-contact" (click)="clearModal()" data-toggle="modal" data-target="#contact2" class="btn btn-success btn-block follow">Deactivate</button> 
+                          <!--  <button class="btn btn-warning btn-block">Descargar Curriculum</button>    -->                             
                         </div>
                         <div class="row user-detail-row">
                             <div class="col-md-12 col-sm-12 user-detail-section2 pull-left">
@@ -149,7 +155,7 @@ https://templatemo.com/tm-556-catalog-z
                                     <h5>Developer</h5>
                                 </div>
                                 <div class="col-md-4 col-sm-6 col-xs-6 profile-header-section1 text-right pull-rigth">
-                                    <a href="/search" class="btn btn-primary btn-block">Seguir buscando</a>
+                                    <a href="index.html" class="btn btn-primary btn-block">Log Out</a>
                                 </div>
                             </div>
                         </div>
@@ -158,10 +164,10 @@ https://templatemo.com/tm-556-catalog-z
                                 <div class="col-md-8">
                                         <ul class="nav nav-tabs" role="tablist">
                                                 <li class="nav-item">
-                                                  <a class="nav-link active" href="#profile" role="tab" data-toggle="tab"><i class="fas fa-user-circle"></i> Profile</a>
+                                                  <a class="nav-link active" href="#profile" role="tab" data-toggle="tab"><i class="fas fa-user-circle"></i> User Profile</a>
                                                 </li>
                                                 <li class="nav-item">
-                                                  <a class="nav-link" href="#buzz" role="tab" data-toggle="tab"><i class="fas fa-info-circle"></i> Edit</a>
+                                                  <a class="nav-link" href="#buzz" role="tab" data-toggle="tab"><i class="fas fa-edit"></i> Edit profile </a>
                                                 </li>                                                
                                               </ul>
                                               
@@ -220,18 +226,20 @@ https://templatemo.com/tm-556-catalog-z
                                                 </div>
                                                 <div role="tabpanel" class="tab-pane fade" id="buzz">
                                                       <br>
+                                                      
+                                                       <form  id="login-form" action="" class="needs-validation" method="post" novalidate>
                                                             <div class="row">
                                                                 <div class="col-md-2">
-                                                                    <label>Name</label>
+                                                                    <label for="name">Name</label>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                     <input type="email" class="form-control" class="form-control" value="Juan perez" required>
+                                                                     <input type="text" class="form-control" class="form-control" value="Juan perez" required>
                                                                 </div>
                                                             </div>
                                                              <br>
                                                             <div class="row">
                                                                 <div class="col-md-2">
-                                                                    <label>Email</label>
+                                                                    <label for="email">Email</label>
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                 	<input type="email" class="form-control" id="inputEmail" value="juanp@gmail.com" required>
@@ -241,7 +249,7 @@ https://templatemo.com/tm-556-catalog-z
                                                              <br>
                                                             <div class="row">
                                                                 <div class="col-md-2">
-                                                                    <label>Address</label>
+                                                                    <label for ="adress">Address</label>
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <input type="text" class="form-control" id="inputAddress" value="123456789" required>
@@ -250,7 +258,7 @@ https://templatemo.com/tm-556-catalog-z
                                                             <br>
                                                             <div class="row">
                                                                 <div class="col-md-2">
-                                                                    <label>City</label>
+                                                                    <label for="city">City</label>
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <input type="text" class="form-control" id="inputCity"   value="Kaduwela" required>
@@ -259,7 +267,7 @@ https://templatemo.com/tm-556-catalog-z
                                                              <br>
                                                              <div class="row">
                                                                 <div class="col-md-2">
-                                                                    <label>Country</label>
+                                                                    <label for="contry">Country</label>
                                                                 </div>
                                                                 <div class="col-md-6">
 								                                      <select id="inputState" class="form-control">
@@ -270,6 +278,9 @@ https://templatemo.com/tm-556-catalog-z
 																      </select>
                                                                 </div>
                                                             </div>
+                                                            <br>
+                                                             <button type="submit" class="btn btn-primary">Save	</button>
+                                                        </form>    
                                                 </div>
                                                 
                                               </div>
@@ -287,9 +298,9 @@ https://templatemo.com/tm-556-catalog-z
                                         <a href="http://camaradecomerciozn.com/">
                                             <div class="col-md-12 image-right">
                                                <a class="navbar-brand" href="index.html">
-                <h2>  <i class="fas fa-film mr-2"></i>
-                SingMe</h2>
-            </a>
+									                <h2>  <i class="fas fa-film mr-2"></i>
+									                SingMe</h2>
+									            </a>
                                             </div>
                                         </a>
                                         <div class="col-md-12 image-right-detail-section2">
@@ -305,40 +316,80 @@ https://templatemo.com/tm-556-catalog-z
         </div>
     </div>
 
+    <!-- pop up o1 -->
     <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
+        
             <div class="modal-content">
+            <form  id="login-form" action="" class="needs-validation" method="post"  onsubmit="return checkpassword()" novalidate> 
                 <div class="modal-header">
-                    <h5 class="modal-title" id="contact">Contactarme</h5>
+                    <h5 class="modal-title" id="contact">Change Password</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <p for="msj">Se enviará este mensaje a la persona que desea contactar, indicando que te quieres comunicar con el. Para esto debes de ingresar tu información personal.</p>
+                        <p for="msj"></p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="txtFullname">Current Password</label>
+                        <input type="password" id="txtFullname" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label for="txtFullname">Nombre completo</label>
-                        <input type="text" id="txtFullname" class="form-control">
+                        <label for="txtEmail">New Password</label>
+                        <input type="password" id="pw" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <label for="txtEmail">Email</label>
-                        <input type="text" id="txtEmail" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label for="txtPhone">Teléfono</label>
-                        <input type="text" id="txtPhone" class="form-control">
+                        <label for="txtPhone">Re-enter New Password</label>
+                        <input type="password" id="repw" class="form-control" required>
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary" (click)="openModal()" data-dismiss="modal">Guardar</button>
+                    <button type="Reset" class="btn btn-secondary" >Reset</button>
+                    <button type="submit" class="btn btn-primary" (click)="openModal()" >Change</button>
                 </div>
+               </form> 
             </div>
+           
         </div>
     </div>
-             
+    
+    <!-- pop up o2 -->
+      <div class="modal fade" id="contact2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        
+            <div class="modal-content">
+            <form  id="login-form" action="" class="needs-validation" method="post" novalidate> 
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contact">Deactivate account</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <p for="msj"></p>
+                    </div>
+                    
+                
+                    <div class="form-group">
+                        <label for="txtEmail">Password</label>
+                        <input type="password" id="txtEmail" class="form-control" required>
+                    </div>
+                  
+                </div>
+                <div class="modal-footer">
+                   
+                    <button type="submit" class="btn btn-primary" (click)="openModal()" >Deactivate</button>
+                </div>
+               </form> 
+            </div>
+           
+        </div>
+    </div>
+            
              <!-- userAccount  -->
              
             <div class="col-lg-4 col-12">
