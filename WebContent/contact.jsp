@@ -78,7 +78,7 @@ https://templatemo.com/tm-556-catalog-z
                 <form id="contact-form" action="" method="POST" class="tm-contact-form mx-auto">
                 	<i><label for="songName">Please use below link to request new songs.</label></i>
                 	<div class="form-group tm-text-right">
-                        <a href="Request songs.jsp" class="btn btn-primary">Request books</a>
+                        <a href="Request songs.jsp" class="btn btn-primary">Request Songs</a>
                     </div>
                     <div class="form-group">
                         <input type="text" name="name" class="form-control rounded-0" placeholder="Name" required />
@@ -89,8 +89,8 @@ https://templatemo.com/tm-556-catalog-z
                     <div class="form-group">
                         <select class="form-control" id="contact-select" name="inquiry">
                             <option value="-">Subject</option>
-                            <option value="new">New song</option>
-                            <option value="creative">User Account</option>
+                            <option value="new">Website issues</option>
+                            <option value="creative">My Account</option>
                             <option value="Other">Other</option>
                         </select>
                     </div>
