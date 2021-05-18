@@ -17,5 +17,8 @@
 	<classpathentry kind="lib" path="C:/Users/User/Desktop/New folder/JAR Files/javax.servlet-3.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/User/Desktop/New folder/JAR Files/mysql-connector-java-5.1.48-bin.jar"/>
 	<classpathentry kind="lib" path="C:/Users/User/Desktop/New folder/JAR Files/servlet-api.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Desktop/drivers/JAR Files/javax.servlet-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Desktop/drivers/JAR Files/mysql-connector-java-5.1.48-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/User/Desktop/drivers/JAR Files/servlet-api.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
