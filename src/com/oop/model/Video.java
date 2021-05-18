@@ -4,6 +4,6 @@ public class Video {
 	
 	private String videoId;
 	private String videoName;
-	private  video;
+	private Part video;
 
 }
