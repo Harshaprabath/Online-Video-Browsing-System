@@ -113,19 +113,19 @@ https://templatemo.com/tm-556-catalog-z
 	                <h2 class="tm-text-primary mb-5">Request songs</h2>
 	          
 	           
-	                    <form  id="login-form" action="" class="needs-validation" method="post" novalidate>
+	                    <form  id="login-form" action="requestSongServlet" class="needs-validation" method="post" novalidate>
 					        <div class="form-group">
 					            <label for="songName">Enter required song name</label>
-					            <input type="text" class="form-control" placeholder="song" required>
+					            <input type="text" class="form-control" placeholder="song" name="songName" required>
 					            <div class="invalid-feedback">Please enter a song name.</div>
 					        </div>
 					        <div class="form-group">
 					            <label for="singerName">Enter singer name</label>
-					            <input type="text" class="form-control" placeholder="singer's name">
+					            <input type="text" class="form-control" placeholder="singer's name" name="singerName">
 					        </div>
 					        <div class="form-group">
 					            <label for="inputEmail">Enter your Email</label>
-					            <input type="email" class="form-control" id="inputEmail" placeholder="email" required>
+					            <input type="email" class="form-control" id="inputEmail" placeholder="email" name="email" required>
 					            <div class="invalid-feedback">Please enter a valid email address.</div>
 					            <i><label for="songName">Once relevant song get uploaded, we will let you know via Email. </label></i>
 				        	</div>
