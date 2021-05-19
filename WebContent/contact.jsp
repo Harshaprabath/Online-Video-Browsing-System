@@ -75,7 +75,7 @@ https://templatemo.com/tm-556-catalog-z
         <div class="row tm-mb-50">
             <div class="col-lg-4 col-12 mb-5">
                 <h2 class="tm-text-primary mb-5">Inquire here</h2>
-                <form id="contact-form" action="" method="POST" class="tm-contact-form mx-auto">
+                <form id="contact-form" action="ContactUsServlet" method="POST" class="tm-contact-form mx-auto">
                 	<i><label for="songName">Please use below link to request new songs.</label></i>
                 	<div class="form-group tm-text-right">
                         <a href="Request songs.jsp" class="btn btn-primary">Request Songs</a>
@@ -101,6 +101,13 @@ https://templatemo.com/tm-556-catalog-z
                     <div class="form-group tm-text-right">
                         <button type="submit" class="btn btn-primary">Send</button>
                     </div>
+                    <%  
+                    	String Output_msg = (String)request.getAttribute("message");
+                		
+                			if (Output_msg == null)
+                				Output_msg = " ";
+                    %> 
+                    <label> <i><%=Output_msg %></i> </label>
                 </form>                
             </div>
             <div class="col-lg-4 col-12 mb-5">
