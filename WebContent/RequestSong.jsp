@@ -112,8 +112,8 @@ https://templatemo.com/tm-556-catalog-z
 	                <div class="col-lg-4 col-12 mb-5">
 	                <h2 class="tm-text-primary mb-5">Request songs</h2>
 	          
-	           
-	                    <form  id="login-form" action="requestSongServlet" class="needs-validation" method="post" novalidate>
+	          
+	                    <form  id="login-form" action="requestSongServlet" method="POST" class="needs-validation"  novalidate>
 					        <div class="form-group">
 					            <label for="songName">Enter required song name</label>
 					            <input type="text" class="form-control" placeholder="song" name="songName" required>

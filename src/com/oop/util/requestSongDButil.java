@@ -20,26 +20,28 @@ public class requestSongDButil {
 	try {
 		
 		con=DataBaseConection.getConnection();
-		String sql = "INSERT INTO request_song (songName,singerName,email) values (?, ? ,? )";
+		String sql = "INSERT INTO request_song values (0,?, ? ,? )";
 		st = con.prepareStatement(sql);
 		
 		st.setString(1,songname);
 		st.setString(2,singername);
 		st.setString(3,email);
 		
-		int result=st.executeUpdate();
+		int result = st.executeUpdate();
 		
-		if(result>0) {
-			isSuccess =true;
+		if(result > 0) {
+			
+			isSuccess = true;
 		}
 		else {
-			isSuccess =false;
+			
+			isSuccess = false;
 		}
 		
 		con.close();
 		
 	} catch (SQLException e) {
-		// TODO Auto-generated catch block
+		
 		e.printStackTrace();
 	}
 	return isSuccess;

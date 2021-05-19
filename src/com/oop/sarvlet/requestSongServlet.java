@@ -1,13 +1,15 @@
 package com.oop.sarvlet;
 
 import java.io.IOException;
+
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.oop.model.Request_songs;
+
 import com.oop.util.requestSongDButil;
 
 /**
@@ -46,11 +48,14 @@ public class requestSongServlet extends HttpServlet {
 			
 			if(isTrue==true) {
 			
-				
+				RequestDispatcher dispatcher = request.getRequestDispatcher("RequestSong.jsp");
+				dispatcher.forward(request, response);
+			
 			}
 			else {
 				
-				
+				RequestDispatcher dispatcher = request.getRequestDispatcher("RequestSong.jsp");
+				dispatcher.forward(request, response);
 			}
 			
 		}catch(Exception e) {
