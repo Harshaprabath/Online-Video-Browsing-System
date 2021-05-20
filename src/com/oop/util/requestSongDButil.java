@@ -6,13 +6,12 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 
-import com.mysql.jdbc.Statement;
+
 
 public class requestSongDButil {
 
 	
 	private static Connection con=null;
-	private static Statement statement=null;
 	public static PreparedStatement st=null;
 	
 	public static boolean requestSong(String songname,String singername,String email) {

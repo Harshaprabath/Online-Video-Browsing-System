@@ -3,12 +3,11 @@ package com.oop.util;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
-import com.mysql.jdbc.Statement;
+
 import com.oop.DBconection.DataBaseConection;
 
 public class RegisterDButil {
 	private static Connection con=null;
-	private static Statement statement=null;
 	public static PreparedStatement st=null;
 	
 	public static boolean register(String firstName,String lastname,String address,String city,String country,String email,String password) {
