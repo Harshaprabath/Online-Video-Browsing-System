@@ -75,11 +75,11 @@ https://templatemo.com/tm-556-catalog-z
         <div class="row tm-mb-50">
             <div class="col-lg-4 col-12 mb-5">
                 <h2 class="tm-text-primary mb-5">Inquire here</h2>
-                <form id="contact-form" action="ContactUsServlet" method="POST" class="tm-contact-form mx-auto">
-                	<i><label for="songName">Please use below link to request new songs.</label></i>
-                	<div class="form-group tm-text-right">
-                        <a href="Request songs.jsp" class="btn btn-primary">Request Songs</a>
-                    </div>
+                <i><label for="songName">Please use below link to request new songs.</label></i>
+               	<div class="form-group tm-text-right">
+                       <a href="RequestSong.jsp" class="btn btn-primary">Request Songs</a>
+                </div>
+                <form id="contact-form" action="ContactUsServlet" method="POST" class="tm-contact-form mx-auto">           
                     <div class="form-group">
                         <input type="text" name="name" class="form-control rounded-0" placeholder="Name" required />
                     </div>
