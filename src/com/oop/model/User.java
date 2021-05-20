@@ -7,6 +7,7 @@ public class User {
 	private String lastName;
 	private String Address;
 	private String city;
+	private String country;
 	private String email;
 	private String password;
 	
@@ -134,6 +135,14 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	
+
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+		
 }
