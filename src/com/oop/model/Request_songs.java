@@ -21,8 +21,7 @@ public class Request_songs {
 		this.songName = null;
 		this.singerName = null;
 		this.email = null;
-	}
-	
+	}	
 	
 	
 	public int getRsID() {
