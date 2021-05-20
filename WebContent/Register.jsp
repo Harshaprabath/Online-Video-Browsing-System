@@ -103,43 +103,43 @@ https://templatemo.com/tm-556-catalog-z
           
     
           
-                       <form  id="login-form" action="" class="needs-validation" method="post" onsubmit="return checkpassword()" novalidate>
+                       <form  id="login-form" action="RegisterServlet" class="needs-validation" method="post" onsubmit="return checkpassword()" novalidate>
                                   
 				              <div class="row">
 								  <div class="col">
 								    <label for="inputFirstname" >First name</label>
-								     	 <input type="text" class="form-control" placeholder="First name" required>
+								     	 <input type="text" class="form-control" placeholder="First name" name="firstName" required>
 								    </div>
 								    <div class="col">
 									     <label for="inputLastname">Last name</label>
-									      <input type="text" class="form-control" placeholder="Last name" required>
+									      <input type="text" class="form-control" placeholder="Last name" name="lastName" required>
 								    </div>
 								    </div>
 								    <br>
 																    
 				                   <div class="form-group">
 									    <label for="inputAddress">Address</label>
-									    <input type="text" class="form-control" id="inputAddress" placeholder="Address" required>
+									    <input type="text" class="form-control" id="inputAddress" placeholder="Address" name="address" required>
 								  </div>
 								  <div class="row">
 								    <div class="col">
 									      <label for="inputCity">City</label>
-									      <input type="text" class="form-control" id="inputCity" required>
+									      <input type="text" class="form-control" id="inputCity" name="city" required>
 								    </div>
 								    <div class="form-group col-md-4">
 								      <label for="inputState">Country</label>
-								      <select id="inputState" class="form-control">
+								      <select id="inputState" class="form-control" name="country">
 								        <option selected>Sri Lanka</option>
 								        <option>india</option>
 								        <option>Bangaladesh</option>
-								        <option>Bangaladesh</option>
+								        <option>Singapore</option>
 								      </select>
 								    </div>
 							   
 							    </div> 
 								<div class="form-group">
 						            <label for="inputEmail">Email</label>
-						            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+						            <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="email" required>
 						            <div class="invalid-feedback">Please enter a valid email address.</div>
 						        </div>
 						        <div class="form-group">
@@ -149,7 +149,7 @@ https://templatemo.com/tm-556-catalog-z
 						        </div>
 						         <div class="form-group">
 						            <label for="inputRe-enterdPassword">Re-entered Password</label>
-						            <input type="password" class="form-control" id="repw" placeholder="Password" required>
+						            <input type="password" class="form-control" id="repw" placeholder="Password"  name="password" required>
 						            <div class="invalid-feedback">Please re-enter your password to continue.</div>
 						        </div>
 				     
