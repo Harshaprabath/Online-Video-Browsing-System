@@ -292,7 +292,7 @@
 	                <div class="modal-header">
 	                    <h5 class="modal-title" id="contact">Upload video</h5>
 	                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	                        <span aria-hidden="true">×</span>
+	                        <span aria-hidden="true">x</span>
 	                    </button>
 	                </div>
 	                <div class="modal-body">
@@ -325,7 +325,7 @@
 	                <div class="modal-header">
 	                    <h5 class="modal-title" id="contact">Delete video</h5>
 	                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	                        <span aria-hidden="true">×</span>
+	                        <span aria-hidden="true">x</span>
 	                    </button>
 	                </div>
 	                <div class="modal-body">
@@ -352,7 +352,7 @@
 	                <div class="modal-header">
 	                    <h5 class="modal-title" id="contact">Messages</h5>
 	                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	                        <span aria-hidden="true">×</span>
+	                        <span aria-hidden="true">x</span>
 	                    </button>
 	                </div>
 	                <div class="modal-body">
@@ -374,7 +374,7 @@
 	                <div class="modal-header">
 	                    <h5 class="modal-title" id="contact">Song requests</h5>
 	                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	                        <span aria-hidden="true">×</span>
+	                        <span aria-hidden="true">x</span>
 	                    </button>
 	                </div>
 	                <div class="modal-body">
@@ -396,7 +396,7 @@
 	                <div class="modal-header">
 	                    <h5 class="modal-title" id="contact">Reset password</h5>
 	                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	                        <span aria-hidden="true">×</span>
+	                        <span aria-hidden="true">x�</span>
 	                    </button>
 	                </div>
 	                <div class="modal-body">
@@ -432,7 +432,7 @@
 	                <div class="modal-header">
 	                    <h5 class="modal-title" id="contact">Manage users</h5>
 	                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	                        <span aria-hidden="true">×</span>
+	                        <span aria-hidden="true">x</span>
 	                    </button>
 	                </div>
 	                <div class="modal-body">
@@ -444,7 +444,7 @@
 	                        <input type="text" id="txtFullname" class="form-control" required><br><br>
 	                    </div>
 	                    <div class="form-group">
-	                        
+	                        <button class="btn btn-primary btn-block follow" onclick="document.location='index.jsp'">Search user</button>
 	                        <button class="btn btn-danger btn-block follow" onclick="document.location='index.jsp'">Delete user permanently</button>
 	                        
 	                    </div>
@@ -464,7 +464,7 @@
 	                <div class="modal-header">
 	                    <h5 class="modal-title" id="contact">Delete administrator account</h5>
 	                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-	                        <span aria-hidden="true">×</span>
+	                        <span aria-hidden="true">x</span>
 	                    </button>
 	                </div>
 	                <div class="modal-body">
