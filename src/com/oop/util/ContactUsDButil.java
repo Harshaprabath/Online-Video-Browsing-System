@@ -3,12 +3,10 @@ package com.oop.util;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import com.mysql.jdbc.Statement;
 import com.oop.DBconection.DataBaseConection;
 
 public class ContactUsDButil {
 	private static Connection con = null;
-	private static Statement statement = null;
 	private static PreparedStatement st = null;
 	
 	public static boolean addTo_messages (String name, String email, String inquiry, String message) {
