@@ -6,7 +6,7 @@ import java.sql.DriverManager;
 public class DataBaseConection {
 
 	
-	private static String url = "jdbc:mysql://localhost:3306/video_browsing_system";
+	private static String url = "jdbc:mysql://localhost:3306/video_browsing_system?autoReconnect=true&useSSL=false";
 	private static String userName = "root";
 	private static String password = "database@123";
 	private static Connection con;

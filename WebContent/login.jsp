@@ -110,23 +110,30 @@ https://templatemo.com/tm-556-catalog-z
                 <h2 class="tm-text-primary mb-5">Log in</h2>
           
            
-                    <form  id="login-form" action="" class="needs-validation" method="post" novalidate>
+                    <form  id="login-form" action="loginServlet" class="needs-validation" method="post" novalidate>
 				        <div class="form-group">
 				            <label for="inputEmail">Email</label>
-				            <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+				            <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="email" required>
 				            <div class="invalid-feedback">Please enter a valid email address.</div>
 				        </div>
 				        <div class="form-group">
 				            <label for="inputPassword">Password</label>
-				            <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+				            <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password"required>
 				            <div class="invalid-feedback">Please enter your password to continue.</div>
 				        </div>
-				     
+				          <%  
+		                    	String Output_msg = (String)request.getAttribute("message");
+				            	
+		                			if (Output_msg == null)
+		                				Output_msg = " ";
+                   		  %> 
+                   		  <label style="color:red;"> <i><%=Output_msg %></i> </label>
+				     	   
 				        <button type="submit" class="btn btn-primary">Sign in</button>
                    </form>
                       <br>
                     <b>  <a class="hov"  href="Register.jsp">Create an account</a> </b>
-    
+    				
                      
             </div>
              

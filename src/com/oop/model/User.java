@@ -2,39 +2,38 @@ package com.oop.model;
 
 public class User {
 	private int userID;
-	private String name;
 	private String firstName;
 	private String lastName;
-	private String Address;
+	private String address;
 	private String city;
 	private String country;
 	private String email;
 	private String password;
 	
 	
-	public User(int userID, String name, String firstName, String lastName, String address, String city, String email,String password){
 
+
+	public User(int userID, String firstName, String lastName, String address, String city, String country,
+			String email, String password) {
+		super();
 		this.userID = userID;
-		this.name = name;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		Address = address;
+		this.address = address;
 		this.city = city;
+		this.country = country;
 		this.email = email;
 		this.password = password;
 	}
-	
-	
-	
-	
+
+
 
 	public User() {
 		
 		this.userID = 0;
-		this.name = null;
 		this.firstName = null;
 		this.lastName = null;
-		Address = null;
+		this.address = null;
 		this.city = null;
 		this.email = null;
 		this.password = null;
@@ -52,17 +51,6 @@ public class User {
 		this.userID = userID;
 	}
 
-
-
-	public String getName() {
-		return name;
-	}
-
-
-
-	public void setName(String name) {
-		this.name = name;
-	}
 
 
 
@@ -91,13 +79,13 @@ public class User {
 
 
 	public String getAddress() {
-		return Address;
+		return address;
 	}
 
 
 
 	public void setAddress(String address) {
-		Address = address;
+		this.address = address;
 	}
 
 

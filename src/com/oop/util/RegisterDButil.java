@@ -39,10 +39,12 @@ public class RegisterDButil {
 				
 				isSuccess=false;
 			}
+			con.close();
 		
 		}catch(Exception e) {
 			
 			e.printStackTrace();
+			
 			
 		}
 		

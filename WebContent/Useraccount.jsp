@@ -23,6 +23,7 @@
     
     
     
+    
   
     
     
@@ -173,8 +174,25 @@ https://templatemo.com/tm-556-catalog-z
                                                   <a class="nav-link" href="#buzz" role="tab" data-toggle="tab"><i class="fas fa-edit"></i> Edit profile </a>
                                                 </li>                                                
                                               </ul>
-                                              
+                                              <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    
+    										<%@ page import = "java.util.*,com.oop.model.User" %>
                                               <!-- Tab panes -->
+                                              
+                                              
+                                              <c:forEach var = "uniqueCustomer"  items= "${user}">
+                                              	<c:set var = "userID" value = "${uniqueCustomer.userID}"/>
+                                              	<c:set var = "fistName" value = "${uniqueCustomer.firstName}"/>
+                                              	<c:set var = "lastName" value = "${uniqueCustomer.lastName}"/>
+                                              	<c:set var = "Address" value = "${uniqueCustomer.address}"/>
+                                              	<c:set var = "city" value = "${uniqueCustomer.city}"/>
+                                              	<c:set var = "country" value = "${uniqueCustomer.country}"/>
+                                              	<c:set var = "email" value = "${uniqueCustomer.email}"/>
+                                              	<c:set var = "password" value = "${uniqueCustomer.password}"/>
+                                            
+                                             
+                                              
+                                             
                                               <div class="tab-content">
                                                 <div role="tabpanel" class="tab-pane fade show active" id="profile">
                                                         <div class="row">
@@ -182,7 +200,7 @@ https://templatemo.com/tm-556-catalog-z
                                                                     <label>ID</label>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <p>509230671</p>
+                                                                    <p>${uniqueCustomer.userID}</p>
                                                                 </div>
                                                             </div>
                                                             <div class="row">
@@ -190,7 +208,7 @@ https://templatemo.com/tm-556-catalog-z
                                                                     <label>Name</label>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <p>Juan Perez</p>
+                                                                    <p>${uniqueCustomer.firstName} ${uniqueCustomer.lastName}</p>
                                                                 </div>
                                                             </div>
                                                             
@@ -199,7 +217,7 @@ https://templatemo.com/tm-556-catalog-z
                                                                     <label>Email</label>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <p>juanp@gmail.com</p>
+                                                                    <p>${uniqueCustomer.email}</p>
                                                                 </div>
                                                             </div>
                                                             <div class="row">
@@ -207,7 +225,7 @@ https://templatemo.com/tm-556-catalog-z
                                                                     <label>Address</label>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <p>12345678</p>
+                                                                    <p>${uniqueCustomer.address}</p>
                                                                 </div>
                                                             </div>
                                                             <div class="row">
@@ -215,7 +233,7 @@ https://templatemo.com/tm-556-catalog-z
                                                                     <label>City</label>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <p>Kaduwela</p>
+                                                                    <p>${uniqueCustomer.city}</p>
                                                                 </div>
                                                             </div>
                                                              <div class="row">
@@ -223,10 +241,11 @@ https://templatemo.com/tm-556-catalog-z
                                                                     <label>Country</label>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <p>Sri Lanka</p>
+                                                                    <p>${uniqueCustomer.country}</p>
                                                                 </div>
                                                             </div>
                                                 </div>
+                                                </c:forEach>
                                                 <div role="tabpanel" class="tab-pane fade" id="buzz">
                                                       <br>
                                                       
