@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.oop.model.User;
+import com.oop.util.UseraccountDButil;
 import com.oop.util.loginDButil;
 
 /**
@@ -38,11 +40,14 @@ public class loginServlet extends HttpServlet {
 			
 			try {
 				
-				int UserID=loginDButil.userID(email, password);
+				int UserID=UseraccountDButil.loginUserID(email, password);
+				
+				
 				
 				if(UserID!=0) {
 					
 					RequestDispatcher dispatcher=request.getRequestDispatcher("Useraccount.jsp");
+					request.setAttribute("UID",UserID );	
 					dispatcher.forward(request, response);
 				
 				}

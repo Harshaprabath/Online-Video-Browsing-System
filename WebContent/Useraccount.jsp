@@ -138,7 +138,7 @@ https://templatemo.com/tm-556-catalog-z
                         </div>
                         <div class="col-md-12 col-sm-12 col-xs-12 user-detail-section1 text-center">
                             <button id="btn-contact" (click)="clearModal()" data-toggle="modal" data-target="#contact" class="btn btn-success btn-block follow">Change Password</button> 
-                            <button id="btn-contact" (click)="clearModal()" data-toggle="modal" data-target="#contact2" class="btn btn-success btn-block follow">Deactivate</button> 
+                            <button id="btn-contact" (click)="clearModal()" data-toggle="modal" data-target="#contact2" class="btn btn-success btn-block follow">Delete Account</button> 
                           <!--  <button class="btn btn-warning btn-block">Descargar Curriculum</button>    -->                             
                         </div>
                         <div class="row user-detail-row">
@@ -155,8 +155,8 @@ https://templatemo.com/tm-556-catalog-z
                         <div class="col-md-12 profile-header">
                             <div class="row">
                                 <div class="col-md-8 col-sm-6 col-xs-6 profile-header-section1 pull-left">
-                                    <h1>Juan Perez</h1>
-                                    <h5>Developer</h5>
+                                    <h1>User Profile</h1>
+                                    <h5></h5>
                                 </div>
                                 <div class="col-md-4 col-sm-6 col-xs-6 profile-header-section1 text-right pull-rigth">
                                     <a href="index.jsp" class="btn btn-primary btn-block">Log Out</a>
@@ -245,17 +245,28 @@ https://templatemo.com/tm-556-catalog-z
                                                                 </div>
                                                             </div>
                                                 </div>
-                                                </c:forEach>
+                                                
                                                 <div role="tabpanel" class="tab-pane fade" id="buzz">
                                                       <br>
                                                       
-                                                       <form  id="login-form" action="" class="needs-validation" method="post" novalidate>
+                                                       <form  id="login-form" action="UserAccontUpdateServlet" class="needs-validation" method="post" novalidate>
+                                                       		
+                                                       		<input type="hidden"  value="${uniqueCustomer.userID}"  name="userID" required>
                                                             <div class="row">
                                                                 <div class="col-md-2">
-                                                                    <label for="name">Name</label>
+                                                                    <label for="name">First_Name</label>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                     <input type="text" class="form-control" class="form-control" value="Juan perez" required>
+                                                                     <input type="text" class="form-control" class="form-control" name="firstName" value="${uniqueCustomer.firstName}" required>
+                                                                </div>
+                                                            </div>
+                                                             <br>
+                                                             <div class="row">
+                                                                <div class="col-md-2">
+                                                                    <label for="name">Last_Name</label>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                     <input type="text" class="form-control" class="form-control" name="lastName" value="${uniqueCustomer.lastName}" required>
                                                                 </div>
                                                             </div>
                                                              <br>
@@ -264,7 +275,7 @@ https://templatemo.com/tm-556-catalog-z
                                                                     <label for="email">Email</label>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                	<input type="email" class="form-control" id="inputEmail" value="juanp@gmail.com" required>
+                                                                	<input type="email" class="form-control" id="inputEmail"  name="email" value="${uniqueCustomer.email}" required>
                                                                     
                                                                 </div>
                                                             </div>
@@ -274,7 +285,7 @@ https://templatemo.com/tm-556-catalog-z
                                                                     <label for ="adress">Address</label>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <input type="text" class="form-control" id="inputAddress" value="123456789" required>
+                                                                    <input type="text" class="form-control" id="inputAddress" name="address" value="${uniqueCustomer.address}" required>
                                                                 </div>
                                                             </div>
                                                             <br>
@@ -283,7 +294,7 @@ https://templatemo.com/tm-556-catalog-z
                                                                     <label for="city">City</label>
                                                                 </div>
                                                                 <div class="col-md-6">
-                                                                    <input type="text" class="form-control" id="inputCity"   value="Kaduwela" required>
+                                                                    <input type="text" class="form-control" id="inputCity"   name="city" value="${uniqueCustomer.city}" required>
                                                                 </div>
                                                             </div>
                                                              <br>
@@ -292,17 +303,14 @@ https://templatemo.com/tm-556-catalog-z
                                                                     <label for="contry">Country</label>
                                                                 </div>
                                                                 <div class="col-md-6">
-								                                      <select id="inputState" class="form-control">
-																        <option selected>Sri Lanka</option>
-																        <option>india</option>
-																        <option>Bangaladesh</option>
-																        <option>Bangaladesh</option>
-																      </select>
+                                                                		<input type="text" class="form-control" id="inputState"  name="country" value="${uniqueCustomer.country}" required>
+								                                      
                                                                 </div>
                                                             </div>
                                                             <br>
                                                              <button type="submit" class="btn btn-primary">Save	</button>
-                                                        </form>    
+                                                        </form> 
+                                                         </c:forEach>    
                                                 </div>
                                                 
                                               </div>
@@ -347,7 +355,7 @@ https://templatemo.com/tm-556-catalog-z
                 <div class="modal-header">
                     <h5 class="modal-title" id="contact">Change Password</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
+                        <span aria-hidden="true"> X</span>
                     </button>
                 </div>
                 <div class="modal-body">
@@ -379,39 +387,49 @@ https://templatemo.com/tm-556-catalog-z
     </div>
     
     <!-- pop up o2 -->
+    
+                                               	<c:forEach var = "uniqueCustomer"  items= "${user}">
+                                              	<c:set var = "userID" value = "${uniqueCustomer.userID}"/>
+                                              	<c:set var = "fistName" value = "${uniqueCustomer.firstName}"/>
+                                              	<c:set var = "lastName" value = "${uniqueCustomer.lastName}"/>
+                                              	<c:set var = "Address" value = "${uniqueCustomer.address}"/>
+                                              	<c:set var = "city" value = "${uniqueCustomer.city}"/>
+                                              	<c:set var = "country" value = "${uniqueCustomer.country}"/>
+                                              	<c:set var = "email" value = "${uniqueCustomer.email}"/>
+                                              	<c:set var = "password" value = "${uniqueCustomer.password}"/>
+       
+                                              	
       <div class="modal fade" id="contact2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
         
             <div class="modal-content">
-            <form  id="login-form" action="" class="needs-validation" method="post" novalidate> 
+            <form  id="login-form" action="UserAccountDeleteServelet" class="needs-validation" method="post"  novalidate> 
                 <div class="modal-header">
-                    <h5 class="modal-title" id="contact">Deactivate account</h5>
+                    <h5 class="modal-title" id="contact">Delete account</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
+                        <span aria-hidden="true">X</span>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
                         <p for="msj"></p>
                     </div>
-                    
-                
-                    <div class="form-group">
-                        <label for="txtEmail">Password</label>
-                        <input type="password" id="txtEmail" class="form-control" required>
-                    </div>
-                  
-                </div>
+                    <p>Once you click delete button, your account will be deleted permanently. If you clicked by an accidentally, please contact us</p>
+                    <input type="hidden" value="${uniqueCustomer.userID}"  name="userID" required>
+                	
+                	
+               </div>
                 <div class="modal-footer">
                    
-                    <button type="submit" class="btn btn-primary" (click)="openModal()" >Deactivate</button>
+                    <button type="submit" class="btn btn-primary" (click)="openModal()" >Delete</button>
                 </div>
                </form> 
+                
             </div>
            
         </div>
     </div>
-            
+    </c:forEach>      
              <!-- userAccount  -->
              
             <div class="col-lg-4 col-12">

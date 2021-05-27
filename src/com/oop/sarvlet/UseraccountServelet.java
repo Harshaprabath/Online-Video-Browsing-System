@@ -30,7 +30,7 @@ public class UseraccountServelet extends HttpServlet {
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-    	int  UID=2;
+    	int  UID=5;
     	
     	UseraccountDButil userdb=new UseraccountDButil();
     	List<User>userDetails= userdb.useraccountDetails(UID);

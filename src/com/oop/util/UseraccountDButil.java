@@ -13,6 +13,46 @@ public class UseraccountDButil {
 	private static Connection con=null;
 	private static PreparedStatement ps1=null;
 	
+	//for the login
+	public static int loginUserID(String email,String pass) {
+		
+	    int userID=0;
+	
+			try {
+				
+				con =DataBaseConection.getConnection();
+				String sql="select userID from user where email=? and password=? ";
+				ps1=con.prepareStatement(sql);
+			
+				
+				ps1.setString(1,email);
+				ps1.setString(2,pass);
+				
+				ResultSet rs=ps1.executeQuery();  
+				
+				while(rs.next()){  
+					
+					userID=rs.getInt(1);
+					System.out.println(userID);
+			
+				}  
+			
+			}catch(Exception e) {
+				
+				e.getStackTrace();
+			}
+	
+	 return userID;
+}
+
+	
+	
+	
+	
+	
+	
+	
+	//for retrive user information
 	public List<User> useraccountDetails(int userID) {
 		
 		 List<User> userDetails = new ArrayList<>();
@@ -51,12 +91,114 @@ public class UseraccountDButil {
 		
 		}catch(Exception e) {
 			
-			e.getStackTrace();
+			
+				e.getStackTrace();
+		
 		}
 		
 		 return userDetails;
+	
 	}
 	
+	
+	
+	
+	
+	
+	
+	
+	//for update user information
+	public static boolean updateUser(int userID,String firstName,String lastName,String address,String city,String country,String email ) {
+		
+		boolean isSuccess= false;
+		
+		
+		try {
+			con =DataBaseConection.getConnection();
+			String sql="Update user set firstName=?,lastName=?,Address=?,city=?, country=?,email=? where userID=? ";
+			ps1=con.prepareStatement(sql);
+			
+			ps1.setString(1,firstName);
+			ps1.setString(2,lastName);
+			ps1.setString(3,address);
+			ps1.setString(4,city);
+			ps1.setString(5,country);
+			ps1.setString(6,email);
+			ps1.setInt(7,userID);
+			
+			int result = ps1.executeUpdate();
+			
+			if(result>0) {
+				
+				isSuccess= true;
+				
+			}
+			else {
+				
+				isSuccess= false;
+				
+			}
+		
+			con.close();
+		
+		}catch(Exception ex) {
+			
+			ex.getStackTrace();
+	
+		}
+		
+		return isSuccess;
+		
+		
+	}
+	
+	
+
+	
+	
+	
+public static boolean deleteUser(int userID ) {
+		
+		boolean isSuccess= false;
+		
+	
+				try {
+																	
+					con =DataBaseConection.getConnection();
+																	
+					String sql1 = "DELETE FROM user WHERE userID=?";
+					ps1=con.prepareStatement(sql1);
+																	
+					ps1.setInt(1,userID);
+																	
+					int result = ps1.executeUpdate();
+																	
+					if(result>0) {
+																				
+								isSuccess= true;
+																				
+				   }
+																		
+				    else {
+																				
+								isSuccess= false;
+																				
+					}
+																	
+				con.close();
+																	
+				}catch(Exception ex) {
+																	
+								ex.getStackTrace();
+																	
+					}
+																
+											
+											
+		
+		   return isSuccess;
+		
+     }
 	
 	
 }
