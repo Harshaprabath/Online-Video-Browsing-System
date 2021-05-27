@@ -14,9 +14,10 @@ public class UseraccountDButil {
 	private static PreparedStatement ps1=null;
 	
 	//for the login
-	public static int loginUserID(String email,String pass) {
+	public static User validat(String email,String pass) {
 		
-	    int userID=0;
+		User user = null;
+	   
 	
 			try {
 				
@@ -30,20 +31,24 @@ public class UseraccountDButil {
 				
 				ResultSet rs=ps1.executeQuery();  
 				
-				while(rs.next()){  
+				if(rs.next()){  
 					
-					userID=rs.getInt(1);
-					System.out.println(userID);
-			
-				}  
+				    user = new User();
+					user.setUserID(rs.getInt("userID"));
+					
+					
+		        }
+				
 			
 			}catch(Exception e) {
 				
 				e.getStackTrace();
 			}
 	
-	 return userID;
+	 return user;
 }
+	
+
 
 	
 	
@@ -53,8 +58,9 @@ public class UseraccountDButil {
 	
 	
 	//for retrive user information
-	public List<User> useraccountDetails(int userID) {
+	public List<User> useraccountDetails(String userID) {
 		
+		int uid = Integer.parseInt(userID);
 		 List<User> userDetails = new ArrayList<>();
 		
 		try {
@@ -64,7 +70,7 @@ public class UseraccountDButil {
 			ps1=con.prepareStatement(sql);
 		
 			
-			ps1.setInt(1,userID);
+			ps1.setInt(1,uid);
 		
 			
 			ResultSet rs=ps1.executeQuery();  
@@ -194,11 +200,64 @@ public static boolean deleteUser(int userID ) {
 					}
 																
 											
-											
+		return isSuccess;
 		
-		   return isSuccess;
-		
-     }
+ }
 	
 	
+
+
+
+
+public static boolean ChengePassword(int userID, String password ) {
+	
+	boolean isSuccess= false;
+	
+
+			try {
+																
+				con =DataBaseConection.getConnection();
+																
+				String sql1 = "Update user set password=? where userID=? ";
+				ps1=con.prepareStatement(sql1);
+				
+				ps1.setString(1,password );
+				ps1.setInt(2,userID);
+				
+																
+				int result = ps1.executeUpdate();
+																
+				if(result>0) {
+																			
+							isSuccess= true;
+																			
+			   }
+																	
+			    else {
+																			
+							isSuccess= false;
+																			
+				}
+																
+			con.close();
+																
+			}catch(Exception ex) {
+																
+							ex.getStackTrace();
+																
+				}
+															
+										
+										
+	
+	   return isSuccess;
+	
+ }
+
+
 }
+
+
+
+
+

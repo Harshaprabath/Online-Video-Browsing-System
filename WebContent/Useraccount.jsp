@@ -248,7 +248,7 @@ https://templatemo.com/tm-556-catalog-z
                                                 
                                                 <div role="tabpanel" class="tab-pane fade" id="buzz">
                                                       <br>
-                                                      
+                                                   
                                                        <form  id="login-form" action="UserAccontUpdateServlet" class="needs-validation" method="post" novalidate>
                                                        		
                                                        		<input type="hidden"  value="${uniqueCustomer.userID}"  name="userID" required>
@@ -347,11 +347,25 @@ https://templatemo.com/tm-556-catalog-z
     </div>
 
     <!-- pop up o1 -->
+    
+    					
+                                               	<c:forEach var = "uniqueCustomer"  items= "${user}">
+                                              	<c:set var = "userID" value = "${uniqueCustomer.userID}"/>
+                                              	<c:set var = "fistName" value = "${uniqueCustomer.firstName}"/>
+                                              	<c:set var = "lastName" value = "${uniqueCustomer.lastName}"/>
+                                              	<c:set var = "Address" value = "${uniqueCustomer.address}"/>
+                                              	<c:set var = "city" value = "${uniqueCustomer.city}"/>
+                                              	<c:set var = "country" value = "${uniqueCustomer.country}"/>
+                                              	<c:set var = "email" value = "${uniqueCustomer.email}"/>
+                                              	<c:set var = "password" value = "${uniqueCustomer.password}"/>
+       
+    
+    
     <div class="modal fade" id="contact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
         
             <div class="modal-content">
-            <form  id="login-form" action="" class="needs-validation" method="post"  onsubmit="return checkpassword()" novalidate> 
+            <form  id="login-form" action="UserAccChengePassword" class="needs-validation" method="post"  onsubmit="return checkpassword()" novalidate> 
                 <div class="modal-header">
                     <h5 class="modal-title" id="contact">Change Password</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -364,8 +378,8 @@ https://templatemo.com/tm-556-catalog-z
                     </div>
                     
                     <div class="form-group">
-                        <label for="txtFullname">Current Password</label>
-                        <input type="password" id="txtFullname" class="form-control" required>
+                        <label for="txtFullname"></label>
+                        <input type="hidden" id="txtFullname" class="form-control"  name="UserId" value="${uniqueCustomer.userID}" required>
                     </div>
                     <div class="form-group">
                         <label for="txtEmail">New Password</label>
@@ -373,7 +387,7 @@ https://templatemo.com/tm-556-catalog-z
                     </div>
                     <div class="form-group">
                         <label for="txtPhone">Re-enter New Password</label>
-                        <input type="password" id="repw" class="form-control" required>
+                        <input type="password" id="repw" class="form-control"  name="password" required>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -385,6 +399,8 @@ https://templatemo.com/tm-556-catalog-z
            
         </div>
     </div>
+    
+     </c:forEach>  
     
     <!-- pop up o2 -->
     

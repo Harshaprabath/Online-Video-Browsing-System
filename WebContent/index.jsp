@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    
+    	<%@ page import = "java.util.*,com.oop.model.User" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +30,9 @@
 
 </head>
 <body>
+
+
+
     <!-- Page Loader -->
     <div id="loader-wrapper">
         <div id="loader"></div>
@@ -42,7 +48,11 @@
                 SingMe</h2>
             </a>
             <b> <a class="hov1" href="Register.jsp">Register</a> </b> | 
-            <b> <a class="hov1" href="login.jsp">Login</a> </b>
+            <b> <a class="hov1" href="login.jsp">Login</a> </b></b> |
+            <c:url var = "userProfile" value = "UseraccountServelet">
+            	<c:param name = "userID" value = "${user.userID}"> </c:param>
+            </c:url> 
+            <b> <a class="hov1" href="${userProfile}">UserProfile</a> </b>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>

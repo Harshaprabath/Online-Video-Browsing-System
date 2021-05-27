@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.oop.model.User;
 import com.oop.util.UseraccountDButil;
-import com.oop.util.loginDButil;
 
 /**
  * Servlet implementation class UseraccountServelet
@@ -30,10 +29,11 @@ public class UseraccountServelet extends HttpServlet {
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-    	int  UID=5;
+    	
+    	String userId = request.getParameter("userID");
     	
     	UseraccountDButil userdb=new UseraccountDButil();
-    	List<User>userDetails= userdb.useraccountDetails(UID);
+    	List<User>userDetails= userdb.useraccountDetails(userId);
     	
     	if(userDetails != null) {
     		
